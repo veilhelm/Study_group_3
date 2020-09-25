@@ -1,2 +1,2 @@
-//alex
-//esto es una respuesta de prueba
+//crear un objeto Group que contenga la propiedad integrantes, que es un array de objetos donde cada objeto sea una persona 
+//y crearle los metodos al objeto Group de retornar la persona más joven, y el método de retornar la persona con el nombre más largo
