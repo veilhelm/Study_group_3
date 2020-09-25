@@ -10,7 +10,6 @@ const array = [1,2,3,4,5,6]
 const arrayObj = [object, 2]
 const boolean = true //false
 
-
 console.log(object.name)
 console.log(object.age)
 console.log(array[0])
