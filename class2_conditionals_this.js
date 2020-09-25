@@ -15,21 +15,21 @@ const z = false
 //3 == "3" true
 //3 === "3" false
 
-if(x && y){
-    console.log("i am being executed")
-}
+// if(x && y){
+//     console.log("i am being executed")
+// }
 
-if(x || y){
-    console.log("i am being executed")
-}
+// if(x || y){
+//     console.log("i am being executed")
+// }
 
-if(x === z) {
-    console.log("i am being executed")
-}
+// if(x === z) {
+//     console.log("i am being executed")
+// }
 
-if(x !== z) {
-    console.log("i am being executed")
-}
+// if(x !== z) {
+//     console.log("i am being executed")
+// }
 
 // const isItTrue = (x !== z) ? true : false  
 
