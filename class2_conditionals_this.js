@@ -54,6 +54,7 @@ class Car {
         this.brand = brand,
         this.age = age
     }  
+
 }
 
 Car.prototype.lifeSpan = function() {
