@@ -109,3 +109,7 @@ const studyGroup3 = new Class(group)
 const subGroup = new Class([alex,edwin,jhon])
 console.log(studyGroup3.calcAverageAge())
 console.log(subGroup.calcAverageAge())
+
+
+// rama local master (actualce mi rama local master)
+// rama local veilhelm (actualizar también mi rama)
