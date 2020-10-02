@@ -7,24 +7,24 @@
 //output= v
 
 
-/////// JOHN
+/////// JOHN/////////////////
+function letraRepetida(cadena) {
+    const ArregloString = cadena.split("")
+    let masrepetida = { letra: "", repetidciones: 1 }
+    let contador = 0
 
-const cadena = "asggggggggbbbcsdwddddwwwwww"
-const ArregloString = cadena.split("")
-let repetida = ""
-let masrepetida = { letra: "", repetidciones: 1 }
-let contador = 0
-
-for (let [indice, valor] of ArregloString.entries()) {
-
-    let valor2 = ArregloString[indice + 1]
-    contador = (valor === valor2) ? contador += 1 : 0
-    if (valor === valor2 && masrepetida.repetidciones <= contador) masrepetida.letra = valor, masrepetida.repetidciones += 1
+    for (let [indice, valor] of ArregloString.entries()) {
+        let valor2 = ArregloString[indice + 1]
+        contador = (valor === valor2) ? contador += 1 : 0
+        if (valor === valor2 && masrepetida.repetidciones <= contador) masrepetida.letra = valor, masrepetida.repetidciones += 1
+    }
+    respuesta = (masrepetida.letra + " se repite: " + masrepetida.repetidciones)
+    return respuesta
 }
-console.log(masrepetida.letra, " se repite: ", masrepetida.repetidciones)
 
+console.log(letraRepetida("asggggggggbbbcsdwddddwwwwww"))
 
-////// KARINA
+////// KARINA//////////////
 
 
 const conteo_general = (conteostring) => {
