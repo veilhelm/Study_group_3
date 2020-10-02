@@ -5,3 +5,40 @@
 
 //input= "aabcaaacdaaakaajvdaaavvvvvvv"
 //output= v
+
+
+/////// JOHN
+
+const cadena = "asggggggggbbbcsdwddddwwwwww"
+const ArregloString = cadena.split("")
+let repetida = ""
+let masrepetida = { letra: "", repetidciones: 1 }
+let contador = 0
+
+for (let [indice, valor] of ArregloString.entries()) {
+
+    let valor2 = ArregloString[indice + 1]
+    contador = (valor === valor2) ? contador += 1 : 0
+    if (valor === valor2 && masrepetida.repetidciones <= contador) masrepetida.letra = valor, masrepetida.repetidciones += 1
+}
+console.log(masrepetida.letra, " se repite: ", masrepetida.repetidciones)
+
+
+////// KARINA
+
+
+const conteo_general = (conteostring) => {
+    let contador = 0
+    const arreglo = conteostring.split("")
+    let letras = 0
+    let repetir = 1
+
+    for (let [index, leter] of arreglo.entries()) {
+        let siguiente = arreglo[index + 1]
+        if (leter === siguiente) contador += 1
+        else contador = 0
+        if (contador >= repetir && leter === siguiente) letras = leter, repetir += 1
+    }
+    console.log(letras, repetir)
+}
+conteo_general("aabcaaacdaaakaajvdaaavvvvvvv")
