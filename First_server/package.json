@@ -1,0 +1,23 @@
+{
+  "name": "my_First_server",
+  "version": "1.0.0",
+  "description": "our first server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veilhelm/Study_group_3.git"
+  },
+  "author": "veilhelm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veilhelm/Study_group_3/issues"
+  },
+  "homepage": "https://github.com/veilhelm/Study_group_3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.8"
+  }
+}
