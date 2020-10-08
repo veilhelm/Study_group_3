@@ -1,0 +1,19 @@
+{
+    "name": "My first server",
+    "version": "1.0.0",
+    "description": "firts server",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/veilhelm/Study_group_3.git"
+    },
+    "author": "Karina",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/veilhelm/Study_group_3/issues"
+    },
+    "homepage": "https://github.com/veilhelm/Study_group_3#readme"
+}
