@@ -16,7 +16,7 @@ app.get("/seyhi", (req, res) => {
     res.send("Hola")
 
 })
-
+ 
 app.post("/saveNames", (req, res) => {
     names = req.body.names
     res.send("Nombres Guardados")
