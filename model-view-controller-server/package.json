@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "second server with architecture",
   "main": "index.js",
-  "author": "veilhelm alex",
+  "author": "edwin",
   "license": "MIT",
   "scripts": {
-    "dev" : "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^4.1.1",
-    "mongoose": "^5.10.8",
+    "mongoose": "^5.10.9",
     "morgan": "^1.10.0"
   }
 }
