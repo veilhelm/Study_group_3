@@ -1,7 +1,7 @@
 const { connection, connect } = require("mongoose")
 
 function dbConnection() {
-    const url = "mongodb+srv://johnm:use.app69301@clusterstudent.ojyam.mongodb.net/studentTest?retryWrites=true&w=majority"
+    const url = "url"
     const options = {
         useNewUrlParser: true,
         useUnifiedTopology: true,
