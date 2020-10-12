@@ -1,4 +1,4 @@
-const {Schema, model} = require("mongoose")
+const { Schema, model } = require("mongoose")
 
 const studentSchema = new Schema({
     name: {
@@ -17,6 +17,8 @@ const studentSchema = new Schema({
 }, {
     timestamps: true
 })
+
+
 
 const student = new model("student", studentSchema)
 

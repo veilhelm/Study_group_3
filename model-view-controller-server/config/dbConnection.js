@@ -1,14 +1,14 @@
-const {connection, connect} = require("mongoose")
+const { connection, connect } = require("mongoose")
 
 function dbConnection() {
-    const uri = "aqui pon la dirección de tu base de datos!!! creénla no sean flojos"
+    const url = "mongodb+srv://johnm:use.app69301@clusterstudent.ojyam.mongodb.net/studentTest?retryWrites=true&w=majority"
     const options = {
-        useNewUrlParser : true,
+        useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
         useFindAndModify: false,
     }
-    connect(uri, options)
+    connect(url, options)
 
     connection.once("open", () => console.log("connection to database stablished"))
 }
