@@ -1,4 +1,4 @@
-const {Schema, model} = require("mongoose")
+const { Schema, model } = require("mongoose")
 
 const studentSchema = new Schema({
     name: {
@@ -13,7 +13,11 @@ const studentSchema = new Schema({
         required: true,
         min: 18,
         default: 18
-    }
+    },
+    parent: [{
+        type: Schema.Types.ObjectId,
+        ref: 'parent'
+    }]
 }, {
     timestamps: true
 })
