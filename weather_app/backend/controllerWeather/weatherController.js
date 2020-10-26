@@ -8,7 +8,7 @@ class WeatherController extends EventEmiter {
 
             const { data } = await axios({
                 method: "GET",
-                baseURL: process.env.BASEURL,
+                baseURL: process.env.BASE,
                 url: process.env.URL
             })
             const weather = await new modelWeather(data)
