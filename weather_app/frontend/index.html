@@ -22,11 +22,12 @@
 
                         <h1 id="weather-location" class="h2">City</h1>
                         <h3 id="weather-description" class="description">Description</h3>
-                        <h3 id="weather-string" class="degrees">Celcius</h3>
-                        <ul class="list-grup mt-3">
-                            <li id="weather-humidity" class="list-group-item"></li>
-                            <li id="weather-wind" class="list-group-item"></li>
-                        </ul>
+                        <h3 id="weather-string" class="degrees">temperature</h3>
+
+                        <h3 id="weather-humidity" class="list-group-item1">humidity</h3>
+                        <h3 id="weather5" class="item2"></h3>
+                        <h3 id="weather-wind" class="list-group-item2">wind</h3>
+
                     </div>
 
 
@@ -35,11 +36,11 @@
                     <div class="card-body">
                         <div class="form" id="weatherform">
                             <div class="form-group">
-                                <input type="text" id="city" class="from-control" placeholder="City" autofocus>
+                                <input type="text" id="city" class="city" placeholder="City" autofocus>
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-dark btn-block" id="w-change"> 
-                                Save Changes
+                                <button class="btn-dark" id='updateCity' onclick="updateCity()"> 
+                                    Search city
                             </button>
                             </div>
                         </div>

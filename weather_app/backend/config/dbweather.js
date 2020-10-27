@@ -2,7 +2,7 @@ const { connection, connect } = require("mongoose")
 
 function dbConnection() {
     //setUp of variables
-    const uri = "mongodb+srv://edwin:edwin321010@student.bdz52.mongodb.net/posts?retryWrites=true&w=majority"
+    const uri = process.env.BASEURL
 
     const options = {
         useNewUrlParser: true,
