@@ -8,11 +8,14 @@ class WeatherController extends EventEmiter {
 
             const { data } = await axios({
                 method: "GET",
-                baseURL: process.env.BASEURL,
+                baseURL: process.env.BASE,
                 url: process.env.URL
             })
             const weather = await new modelWeather(data)
-            weather.save()
+            const temp = weather.main.temp - 273.15
+            weather.main.temp = temp.toFixed(2)
+
+            //weather.save()
             res.status(200).json(weather)
 
         } catch (error) {
@@ -22,7 +25,27 @@ class WeatherController extends EventEmiter {
 
 
     }
+    createCity = async(req, res) => {
+        const city = req.body.city
+
+        try {
+
+            const { data } = await axios({
+                method: "POST",
+                baseURL: process.env.BASE,
+                url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=955b5cf6abc8109c8487b80dc67fea79"
+            })
+            const weather = await new modelWeather(data)
+                //weather.save()
+            res.status(200).json(weather)
+
+        } catch (error) {
+            console.log(error.mensagge)
+            res.status(400).json(error.menssage)
+        }
+
+    }
 }
 
-const weatherController = WeatherController()
+const weatherController = new WeatherController()
 module.exports = weatherController
