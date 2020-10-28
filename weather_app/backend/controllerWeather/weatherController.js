@@ -3,7 +3,7 @@ const EventEmiter = require("events")
 const modelWeather = require("../modelWeather/weatherModel")
 
 class WeatherController extends EventEmiter {
-    createWeather = async(req, res) => {
+    createWeather = async (req, res) => {
         try {
 
             const { data } = await axios({
@@ -15,9 +15,9 @@ class WeatherController extends EventEmiter {
             const temp = weather.main.temp - 273.15
             weather.main.temp = temp.toFixed(2)
 
-            //weather.save()
+            await weather.save()
             res.status(200).json(weather)
-
+            // this.emit('createWeather', weather)
         } catch (error) {
             console.log(error.mensagge)
             res.status(400).json(error.menssage)
@@ -43,9 +43,9 @@ class WeatherController extends EventEmiter {
             console.log(error.mensagge)
             res.status(400).json(error.menssage)
         }
-
     }
 }
 
 const weatherController = new WeatherController()
+// weatherController.on('createWeather', console.log("this is being executed every time that a new weather element is created"))
 module.exports = weatherController
