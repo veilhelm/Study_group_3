@@ -1,11 +1,14 @@
-const {Schema, model} = require("mongoose")
-const menssageSchema = new Schema({
-   message:[{
-       type:String,
+const { Schema, model } = require("mongoose")
+const messageSchema = new Schema({
+    title: {
+        type: String
+    },
+    menssage: [{
+        type: String,
     }]
 
 })
 
-const modelMenssage=new model("Posts",menssageSchema)
+const modelMessage = new model("Posts", messageSchema)
 
-module.exports=modelMenssage
+module.exports = modelMessage
