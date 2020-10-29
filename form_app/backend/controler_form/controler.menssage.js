@@ -1,26 +1,32 @@
-const menssage=require("../model_form/model.message")
-class Menssagecontroler{
-  createMenssage=async(req,res)=>{
-       try {
-           const post=req.body.menssage
-           const mensaje=await menssage()
-           console.log(mensaje.menssage)
-           const arreglo=mensaje.menssage.push(post)
-           mensaje.menssage=arreglo
-           await mensaje.save()
-           res.status(200).json(mensaje)
-       } catch (error) {
-           console.log(error.menssage)
-           res.status(400).json(error)
-       } 
-        
-  }
+const modelMessage = require("../model_form/model.message")
+class Menssagecontroler {
+    createMenssage = async(req, res) => {
+        try {
+            const mens = req.body.message
+            const post = await modelMessage.findById(req.body.dd)
+            post.message.push(mens)
+            await post.save()
+            res.status(200).json(post)
+        } catch (error) {
+            console.log(error.message)
+            res.status(400).json(error)
+        }
+
+    }
+    showMenssage = async(req, res) => {
+        try {
+            const message = await modelMessage.find({})
+            res.status(200).json(message)
+        } catch (error) {
+            res.status(400, json(error))
+        }
+
+    }
 
 
 }
 
 
-const menssageControler=new Menssagecontroler()
+const menssageControler = new Menssagecontroler()
 
-module.exports=menssageControler
-
+module.exports = menssageControler

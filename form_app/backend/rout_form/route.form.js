@@ -1,9 +1,9 @@
 const router = require("express").Router()
-const {model} = require("mongoose")
 const formControl = require("../controler_form/controler.form")
+
 router.route("/").post(formControl.createForm)
-router.route("/").get(formControl.showForm)
-router.put("/").get(formControl.deleteForm)
-router.put("/").delete(formControl.deleteForm)
+router.route("/find").post(formControl.showForm)
+router.route("/").delete(formControl.deleteForm)
+router.route("/").put(formControl.updateForm)
 
-
+module.exports = router
