@@ -1,33 +1,26 @@
-const {Schema, model} = require("mongoose")
+const { Schema, model } = require("mongoose")
 const formSchema = new Schema({
-    name:{
+    name: {
         type: String,
-        required: true,
-        minlength: 3,
         default: "no name"
     },
-    mail:{
+    mail: {
         type: String,
-        require:true,
-        minlength: 8,
+        require: true,
         default: "enter correo",
-        unique: true
+        // unique: true
     },
-    number:{
+    number: {
         type: Number,
-        require:true,
-        min:5,
-        max:10,
         default: 0000
 
     },
-    message:{
-        type:String,
-        required:true,
+    message: {
+        type: String,
         default: "enter message"
     }
-},{
-    timestamps:true
+}, {
+    timestamps: true
 })
-const form = new model("form",formSchema)
+const form = new model("form", formSchema)
 module.exports = form
