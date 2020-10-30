@@ -1,5 +1,7 @@
     const modelForm = require("../model_form/model.form")
     const modelMessage = require("../model_form/model.message")
+    const jwt = require("jsonwebtoken")
+    
 
 
 
@@ -9,10 +11,10 @@
                 const form = new modelForm(req.body)
                 let [message] = await modelMessage.find({ _id: "5f9a1ec74448672d78296c07" })
                 form.message = message.menssage[Math.floor(Math.random() * (8 - 1 + 1) + 1)]
-                console.log(form.message)
-                console.log(form)
-                await form.save()
-                res.status(200).json(form)
+                form.token = jwt.sign({ userId: savedForm._id }, process.env.SECRET_KEY)
+                await form.encryptPassword()
+                const savedForm = await form.save()
+                res.status(200).json(savedForm)
 
 
             } catch (error) {

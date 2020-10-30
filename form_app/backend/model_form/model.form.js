@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose")
+const bcrypt = require("bcrypt")
 const formSchema = new Schema({
     name: {
         type: String,
@@ -10,6 +11,10 @@ const formSchema = new Schema({
         default: "enter correo",
         // unique: true
     },
+    password: {
+        type: String,
+        required: true
+    },
     number: {
         type: Number,
         default: 0000
@@ -18,9 +23,18 @@ const formSchema = new Schema({
     message: {
         type: String,
         default: "enter message"
+    },
+    token: {
+        type: String,
+        required: true
     }
 }, {
     timestamps: true
 })
+
+formSchema.methods.encryptPassword = async function () {
+    this.password = await bcrypt.hash(this.password, 8)
+}
+
 const form = new model("form", formSchema)
 module.exports = form
