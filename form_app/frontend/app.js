@@ -10,15 +10,18 @@ const createUsers = async() => {
         const name = document.querySelector(".controls1").value
         const mail = document.querySelector(".controls2").value
         const number = document.querySelector(".controls3").value
+        const password = document.querySelector(".controls4").value
         const { data } = await axios({
             method: "POST",
             baseURL: "http://127.0.0.1:4000",
             url: "form",
-            data: { name, mail, number }
+            data: { name, mail, number, password }
         })
+        console.log(data)
         document.querySelector(".controls1").value = data.name
         document.querySelector(".controls2").value = data.mail
         document.querySelector(".controls3").value = data.number
+        document.querySelector(".controls4").value = data.password
         label.innerHTML = data.name + ", " + data.message
     } catch (error) {
         label.innerHTML = error.message
