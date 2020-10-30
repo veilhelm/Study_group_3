@@ -1,102 +1,102 @@
 * {
-    margin: 20;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 20;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url('./fondoBlue.jpg');
+  background-image: url('./fondoBlue.jpg');
 }
 
 .form-registro {
-    width: 400px;
-    background: #103673;
-    padding: 30px;
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
+  width: 400px;
+  background: #103673;
+  padding: 30px;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
 }
 
 .form-registro h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .controls1,
 .controls2,
 .controls3,
 .controls4 {
-    width: 100%;
-    background: #103673;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid: #1f53c5;
-    font-size: 18px;
-    font-family: 'calibri';
-    color: white;
+  width: 100%;
+  background: #103673;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-size: 18px;
+  font-family: 'calibri';
+  color: white;
 }
 
 .form-registro p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
 }
 
 .form-registro a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .form-registro a:hover {
-    color: white;
-    text-decoration: underline;
+  color: white;
+  text-decoration: underline;
 }
 
 .botones1,
 .botones2,
 .botones3,
 .botones4 {
-    width: 49%;
-    background: #1f53c5;
-    border: none;
-    border-radius: 5px;
-    padding: 12px;
-    color: white;
-    font-family: 'calibri';
-    font-size: 16px;
-    margin: 16px 0;
-    box-shadow: 3px 7px 6px black;
+  width: 49%;
+  background: #1f53c5;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  color: white;
+  font-family: 'calibri';
+  font-size: 16px;
+  margin: 16px 0;
+  box-shadow: 3px 7px 6px black;
 }
 
 .botones1:hover,
 .botones2:hover,
 .botones3:hover,
 .botones4:hover {
-    width: 49%;
-    background: white;
-    border: none;
-    border-radius: 5px;
-    padding: 12px;
-    color: black;
-    font-family: 'calibri';
-    font-size: 16px;
-    margin: 16px 0;
-    box-shadow: 3px 7px 6px black;
+  width: 49%;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  color: black;
+  font-family: 'calibri';
+  font-size: 16px;
+  margin: 16px 0;
+  box-shadow: 3px 7px 6px black;
 }
 
 .mensaje {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    background: white;
-    width: 100%;
-    border: black;
-    border-radius: 5px;
-    padding: 12px;
-    height: 70px;
-    color: rgb(44, 44, 44);
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background: white;
+  width: 100%;
+  border: black;
+  border-radius: 5px;
+  padding: 12px;
+  height: 70px;
+  color: rgb(44, 44, 44);
 }
