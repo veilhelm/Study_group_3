@@ -27,7 +27,8 @@ body {
 
 .controls1,
 .controls2,
-.controls3 {
+.controls3,
+.controls4 {
     width: 100%;
     background: #103673;
     padding: 10px;

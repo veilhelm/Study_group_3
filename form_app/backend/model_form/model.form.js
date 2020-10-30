@@ -25,7 +25,7 @@ const formSchema = new Schema({
         default: "enter message"
     },
     token: {
-        type: String,
+        type: [{type: String}],
         required: true
     }
 }, {

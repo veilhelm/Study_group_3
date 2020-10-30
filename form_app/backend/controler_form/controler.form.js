@@ -2,9 +2,6 @@
     const modelMessage = require("../model_form/model.message")
     const jwt = require("jsonwebtoken")
 
-
-
-
     class FormControl {
         createForm = async(req, res) => {
             try {
