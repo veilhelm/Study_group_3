@@ -5,7 +5,7 @@ const teacherSchema = new Schema({
         unique:true,
         required:true
     },
-     name: {
+     name:{
          type: String,
          required: true,
          minlength: 3,
@@ -15,7 +15,6 @@ const teacherSchema = new Schema({
         type:Number,
         required: true,
         min: 18
-        
      },
      classrooms:{
         type: String,
