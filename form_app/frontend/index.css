@@ -27,13 +27,14 @@ body {
 
 .controls1,
 .controls2,
-.controls3 {
+.controls3,
+.controls4 {
     width: 100%;
     background: #103673;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid: #1f53c5;
+    border: 1px solid #1f53c5;
     font-size: 18px;
     font-family: 'calibri';
     color: white;
