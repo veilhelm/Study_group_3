@@ -1,4 +1,3 @@
-const teacher = require("../model_teacher/teacher_model")
 const Teacher = require("../model_teacher/teacher_model")
 class TeacherControler {
     createTeacher = async (req,res) => {

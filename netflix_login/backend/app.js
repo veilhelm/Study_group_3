@@ -1,11 +1,11 @@
 require("dotenv").config()
-const dbConnection = require("./config/dbweather")
+const dbConnection = require("./config/dbconnection")
 dbConnection()
 const express = require("express")
 const helmet = require("helmet")
 const morgan = require("morgan")
 const cors = require("cors")
-const weaterRoute = require("./routesWeather/weatherRoute")
+const routeLogin = require("./rout_login/rout_login")
 
 const app = express()
 
@@ -14,6 +14,9 @@ app.use(morgan("dev"))
 app.use(helmet())
 app.use(cors())
 
-app.use("/weather", weaterRoute)
+
+
+
+app.use("/netflix", routeLogin)
 
 module.exports = app

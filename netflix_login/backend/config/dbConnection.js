@@ -1,8 +1,8 @@
 const { connection, connect } = require("mongoose")
 
 function dbConnection() {
-    //setUp of variables
-    const uri = process.env.BASEURL
+    //la variables
+    const uri = process.env.URLBD || 4001
 
     const options = {
         useNewUrlParser: true,
@@ -11,7 +11,7 @@ function dbConnection() {
         useFindAndModify: false
     }
 
-    //connect to database
+    //conecta a la base de datos
     connect(uri, options)
 
     //functions triggered on connection

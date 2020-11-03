@@ -18,6 +18,7 @@ const createUsers = async() => {
             data: { name, mail, number, password }
         })
         console.log(data)
+        localStorage.setItem("token", data.token) 
         document.querySelector(".controls1").value = data.name
         document.querySelector(".controls2").value = data.mail
         document.querySelector(".controls3").value = data.number
@@ -62,6 +63,9 @@ const updateUsers = async() => {
         const mail = document.querySelector(".controls2").value
         const number = document.querySelector(".controls3").value
         const { data } = await axios({
+            headers: {
+                Authentication: `Bearer ${localStorage.getItem("token")}`
+            },
             method: "PUT",
             baseURL: "http://127.0.0.1:4000",
             url: "form",
