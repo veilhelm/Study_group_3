@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken")
 class controlerLogin {
     createLogin = async(req, res) => {
         try {
-            console.log("entro al controlador");
             const login = new modelLogin(req.body)
             login.token = jwt.sign({ userId: login._id }, process.env.SECRET_KEY)
             await login.encryptPassword()
