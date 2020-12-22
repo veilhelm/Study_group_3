@@ -1,18 +1,18 @@
 class ComportamientoAgresivoStrategy {
     comportamiento() {
-        console.log('Yo soy muy agresivo.')
+        console.log(`Soy ${this.nombre} y soy muy agresivo.`)
     }
 }
 
 class ComportamientoSigilosoStrategy {
     comportamiento() {
-        console.log('Yo me comporto de una forma sigilosa.')
+        console.log(`Soy ${this.nombre} y soy sigiloso.`)
     }
 }
 
 class ComportamientoCuriosoStrategy {
     comportamiento() {
-        console.log('Yo soy muy curioso.')
+        console.log(`Soy ${this.nombre} y soy muy curioso.`)
     }
 }
 

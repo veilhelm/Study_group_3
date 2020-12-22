@@ -3,7 +3,8 @@ const cazaStrategies = require('./caza-strategies.js')
 const comportamientoStrategies = require('./comportamiento-strategies.js')
 const Tiburon = require('./Tiburon.js')
 // Prueba de funcionamiento del código.
-const tiburonBlanco = new Tiburon(5, 'Gris oscuro', 500)
+const tiburonBlanco = new Tiburon('Franco', 5, 'Gris oscuro', 500)
+const tiburonTigre = new Tiburon('Max', 3, 'Gris claro con rayas', 375)
 
 tiburonBlanco.nado()
 tiburonBlanco.caza()
@@ -14,3 +15,7 @@ tiburonBlanco.setCazaStrategy(cazaStrategies.cazoCarronaStrategy)
 tiburonBlanco.caza()
 tiburonBlanco.setComportamientoStrategy(comportamientoStrategies.comportamientoCuriosoStrategy)
 tiburonBlanco.comportamiento()
+
+tiburonTigre.caza()
+tiburonTigre.setCazaStrategy(cazaStrategies.cazoManadaStrategy)
+tiburonTigre.caza()
