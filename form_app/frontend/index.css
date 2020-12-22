@@ -29,6 +29,17 @@ body {
 .controls2,
 .controls3,
 .controls4 {
+<<<<<<< HEAD
+    width: 100%;
+    background: #103673;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 18px;
+    font-family: 'calibri';
+    color: white;
+=======
   width: 100%;
   background: #103673;
   padding: 10px;
@@ -38,6 +49,7 @@ body {
   font-size: 18px;
   font-family: 'calibri';
   color: white;
+>>>>>>> 741095e6b63301eb4b530aca93b4b88b3c82d555
 }
 
 .form-registro p {
