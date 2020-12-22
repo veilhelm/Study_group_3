@@ -1,3 +1,4 @@
+//estrategia correr
 class CityRunning {
     run = function () {
       return `this dog  is running in the city`;

@@ -1,30 +1,25 @@
-class StandardPlaying {
-    play = function () {
-      return 'this creature play in a standard way';
+//metodos por defecto
+class BarkindDefect {
+  bark = function () {
+      return 'Funcion por defecto';
     };
   }
+ //instancio funcion por defecto
+  const standardBarking= new BarkindDefect();
 
-  class StandardRunning {
-    run = function () {
-      return 'this creature run in a standard way';
-    };
-  }
-  
-  const standardPlaying = new StandardPlaying();
-  const standardRunning = new StandardRunning();
 
 class Dog {
     constructor(name, age, race){
         (this.name= name),(this.age = age),(this.race = race);
-        this.barkingStrategy = standardPlaying;
-        this.runningStrategy = standardRunning;
+        this.barkingStrategy = standardBarking;
+        this.runningStrategy = () => '';
         this.playingStrategy = () => '';
     }
 }
 
-//__________methodos activos de la clase________________//
+//metodos de la clase//
 Dog.prototype.bark = function (){
-    return this.barkingStrategy.bark();
+    return this.barkingStrategy.bark.bind(this);
 }
 
 Dog.prototype.run = function(){
@@ -35,7 +30,7 @@ Dog.prototype.play = function(){
     return this.playingStrategy.play();
 }
 
-//metodos de configuración de nuestra clase__________________//
+//metodos de  carga de la clase //
 Dog.prototype.setBarkingStrategy = function (fn) {
     this.barkingStrategy = fn;
   };
