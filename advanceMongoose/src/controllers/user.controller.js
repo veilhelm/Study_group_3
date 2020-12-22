@@ -33,7 +33,7 @@ class UserController extends EventEmiter {
 
   getusers = async (req, res) => {
     try {
-      const users = await User.find(createSearchParams(req.query));
+      const users = await User.find(createSearchParams(req.query)); 
       res.json(users);
     } catch (error) {
       console.log(error);
