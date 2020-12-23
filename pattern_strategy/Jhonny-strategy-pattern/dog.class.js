@@ -1,25 +1,25 @@
 //metodos por defecto
 class BarkindDefect {
-  bark = function () {
+  play = function () {
       return 'Funcion por defecto';
     };
   }
  //instancio funcion por defecto
-  const standardBarking= new BarkindDefect();
+  const standardbarking= new BarkindDefect();
 
 
 class Dog {
     constructor(name, age, race){
         (this.name= name),(this.age = age),(this.race = race);
-        this.barkingStrategy = standardBarking;
+        this.barkingStrategy = () => '';
         this.runningStrategy = () => '';
-        this.playingStrategy = () => '';
+        this.playingStrategy  = standardbarking;
     }
 }
 
 //metodos de la clase//
 Dog.prototype.bark = function (){
-    return this.barkingStrategy.bark.bind(this);
+    return this.barkingStrategy.bark;
 }
 
 Dog.prototype.run = function(){

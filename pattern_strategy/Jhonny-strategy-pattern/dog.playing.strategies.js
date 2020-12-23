@@ -1,5 +1,4 @@
 //estrategia jugar
-
 class HousePlaying {
     play = function () {
       return `this dog ${this.name} is playing in the house`;
