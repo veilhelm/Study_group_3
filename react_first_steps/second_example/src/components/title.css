@@ -1,0 +1,9 @@
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(125, 45, 100, 0.25);
+  text-align: center;
+  border-radius: 25px;
+}
